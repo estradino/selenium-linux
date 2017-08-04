@@ -25,7 +25,7 @@ host_name = socket.gethostname()
 
 node_config_file_name = "configNode.json" if len(sys.argv) < 2 else sys.argv[1]
 separator = ";" if platform.system().lower() == "windows" else ":"
-execute_jar_command = '''java -Xmx1024M -cp "c:/selenium/selenium-video-node-2.3.jar%sc:/selenium/proxy.jar%sc:/selenium/selenium-server-standalone-3.4.0.jar" org.openqa.grid.selenium.GridLauncherV3 -role node -nodeConfig %s''' % (
+execute_jar_command = '''java -Xmx1024M -cp "/selenium/selenium-video-node-2.3.jar%s/selenium/proxy.jar%s/selenium/selenium-server-standalone-3.4.0.jar" org.openqa.grid.selenium.GridLauncherV3 -role node -nodeConfig %s''' % (
     separator, separator, node_config_file_name)
 
 public_ip = None
