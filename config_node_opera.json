@@ -1,0 +1,28 @@
+{
+    "withoutServlets": [],
+    "registerCycle": 5000,
+    "hub": "http://localhost:4444",
+    "servlets": [
+        "com.aimmac23.node.servlet.VideoRecordingControlServlet",
+        "org.openqa.asayer.GetLooseServlet"
+    ],
+    "register": true,
+    "capabilities": [
+        {
+            "seleniumProtocol": "WebDriver",
+            "browserName": "firefox",
+            "resolution": "1280x600",
+            "maxInstances": 5
+        }
+    ],
+    "custom": {},
+    "port": "5555",
+    "unregisterIfStillDownAfter": 60000,
+    "role": "node",
+    "proxy": "org.openqa.asayer.AsayerProxy",
+    "debug": false,
+    "downPollingLimit": 2,
+    "maxSession": 5,
+    "nodeStatusCheckTimeout": 5000,
+    "nodePolling": 5000
+}
