@@ -6,11 +6,11 @@
         "com.aimmac23.node.servlet.VideoRecordingControlServlet",
         "org.openqa.asayer.GetLooseServlet"
     ],
-    "register": true,
+    "register": false,
     "capabilities": [
         {
             "seleniumProtocol": "WebDriver",
-            "browserName": "opera",
+            "browserName": "firefox",
             "resolution": "1280x600",
             "maxInstances": 5
         }

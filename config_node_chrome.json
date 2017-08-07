@@ -6,7 +6,7 @@
         "com.aimmac23.node.servlet.VideoRecordingControlServlet",
         "org.openqa.asayer.GetLooseServlet"
     ],
-    "register": true,
+    "register": false,
     "capabilities": [
         {
             "seleniumProtocol": "WebDriver",
