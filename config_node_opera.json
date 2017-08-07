@@ -10,7 +10,7 @@
     "capabilities": [
         {
             "seleniumProtocol": "WebDriver",
-            "browserName": "opera",
+            "browserName": "operablink",
             "resolution": "1280x600",
             "maxInstances": 5
         }
