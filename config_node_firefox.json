@@ -23,6 +23,6 @@
     "debug": false,
     "downPollingLimit": 2,
     "maxSession": 5,
-    "nodeStatusCheckTimeout": 5000,
-    "nodePolling": 5000
+    "nodeStatusCheckTimeout": 300000,
+    "nodePolling": 300000
 }
