@@ -22,7 +22,7 @@
     "proxy": "org.openqa.asayer.AsayerProxy",
     "debug": false,
     "downPollingLimit": 2,
-    "maxSession": 5,
-    "nodeStatusCheckTimeout": 300000,
-    "nodePolling": 300000
+    "maxSession": 1,
+    "nodeStatusCheckTimeout": 10000,
+    "nodePolling": 10000
 }
