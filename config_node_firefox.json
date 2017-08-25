@@ -12,7 +12,7 @@
             "seleniumProtocol": "WebDriver",
             "browserName": "firefox",
             "resolution": "1280x600",
-            "maxInstances": 5
+            "maxInstances": 1
         }
     ],
     "custom": {},
@@ -23,6 +23,6 @@
     "debug": false,
     "downPollingLimit": 2,
     "maxSession": 5,
-    "nodeStatusCheckTimeout": 300000,
-    "nodePolling": 300000
+    "nodeStatusCheckTimeout": 10000,
+    "nodePolling": 10000
 }
