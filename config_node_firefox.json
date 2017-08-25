@@ -23,6 +23,8 @@
     "debug": false,
     "downPollingLimit": 2,
     "maxSession": 5,
+    "browserTimeout": 90,
+    "timeout": 180,
     "nodeStatusCheckTimeout": 300000,
     "nodePolling": 300000
 }
