@@ -3,6 +3,8 @@ Selenium Node - Linux
 
 To start node process just execute :
 
+**use python 2.7 only**
+
 `/path/to/python_binary/python hubCheck.py config_node_[browser name].json`
 
 
