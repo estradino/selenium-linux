@@ -26,5 +26,5 @@
     "browserTimeout": 90,
     "timeout": 180,
     "nodeStatusCheckTimeout": 10000,
-    "nodePolling": 10000
+    "nodePolling": 20000
 }
