@@ -27,5 +27,5 @@
     "downPollingLimit": 2, 
     "maxSession": 1, 
     "port": 5556, 
-    "nodePolling": 10000
+    "nodePolling": 20000
 }
