@@ -57,8 +57,9 @@ def send_heartbeat():
     id = get_node_id()
     if id is not None:
         print("sending heartbeat")
-        r = requests.post(url=node_heartbeat_url, json={"id": get_node_id()},
+        r = requests.post(url=node_heartbeat_url, json={"id": id},
                           auth=('Authorization', authorization_token))
+        print(r.text)
 
 
 def add_log_header():
