@@ -11,7 +11,7 @@
         {
             "seleniumProtocol": "WebDriver",
             "browserName": "chrome",
-            "resolution": "1280x600",
+            "resolution": "1280x720",
             "maxInstances": 5
         }
     ],
