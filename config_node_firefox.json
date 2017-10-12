@@ -19,7 +19,7 @@
     "port": "5555",
     "unregisterIfStillDownAfter": 60000,
     "role": "node",
-    "proxy": "org.openqa.asayer.AsayerWithVideo",
+    "proxy": "org.openqa.asayer.AsayerProxy",
     "debug": false,
     "downPollingLimit": 2,
     "maxSession": 5,
