@@ -10,7 +10,7 @@ import sys
 
 s = sched.scheduler(time.time, time.sleep)
 authorization_token = '301f2b9da3e976f40c1bafe68ca0c703cc58221c7098da654099a40a9885dfcb'
-delay = 30
+delay = 15
 
 node_heartbeat_url = "https://api.asayer.io/dev/selenium/node/linux/heartbeat"
 
@@ -22,7 +22,7 @@ separator = ";" if platform.system().lower() == "windows" else ":"
 script_directory = os.getcwd()
 
 execute_jar_args = ['java',
-                    '-Xmx1024M',
+                    '-Xmx512M',
                     '-cp',
                     '%s/selenium-video-node-2.3.jar%s%s/proxy.jar%s%s/selenium-server-standalone-3.4.0.jar' % (
                         script_directory, separator, script_directory, separator, script_directory),
