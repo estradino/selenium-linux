@@ -12,6 +12,7 @@
             "seleniumProtocol": "WebDriver",
             "browserName": "firefox",
             "resolution": "1280x720",
+            "version": "56",
             "maxInstances": 5
         }
     ],
