@@ -10,7 +10,7 @@ import sys
 
 s = sched.scheduler(time.time, time.sleep)
 authorization_token = '301f2b9da3e976f40c1bafe68ca0c703cc58221c7098da654099a40a9885dfcb'
-delay = 15
+delay = 30
 
 node_heartbeat_url = "https://api.asayer.io/dev/selenium/node/linux/heartbeat"
 
