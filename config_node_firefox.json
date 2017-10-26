@@ -13,6 +13,7 @@
             "browserName": "firefox",
             "resolution": "1280x720",
             "version": "56",
+            "browserVersion": "56",
             "maxInstances": 5
         }
     ],
