@@ -12,6 +12,8 @@
             "seleniumProtocol": "WebDriver",
             "browserName": "operablink",
             "resolution": "1280x720",
+            "version": "48",
+            "browserVersion": "48",
             "maxInstances": 5
         }
     ],
