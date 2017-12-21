@@ -24,7 +24,7 @@ script_directory = os.getcwd()
 execute_jar_args = ['java',
                     '-Xmx512M',
                     '-cp',
-                    '%s/selenium-video-node-2.3.jar%s%s/proxy.jar%s%s/selenium-server-standalone-3.4.0.jar' % (
+                    '%s/selenium-video-node-2.5.jar%s%s/proxy.jar%s%s/selenium-server-standalone-3.4.0.jar' % (
                         script_directory, separator, script_directory, separator, script_directory),
                     'org.openqa.grid.selenium.GridLauncherV3',
                     '-role',
