@@ -10,9 +10,9 @@
   "capabilities": [
     {
       "seleniumProtocol": "WebDriver",
-      "browserName": "chrome",
+      "browserName": "operablink",
       "resolution": "1280x720",
-      "version": "62",
+      "version": "48",
       "maxInstances": 5,
       "debug": true,
       "debug.video": true

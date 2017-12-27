@@ -1,31 +1,33 @@
 {
-    "nodeStatusCheckTimeout": 10000, 
-    "withoutServlets": [], 
-    "registerCycle": 5000, 
-    "hub": "http://35.195.155.40:4444", 
-    "browserTimeout": 90, 
-    "servlets": [
-        "com.aimmac23.node.servlet.VideoRecordingControlServlet", 
-        "org.openqa.asayer.GetLooseServlet"
-    ], 
-    "register": true, 
-    "capabilities": [
-        {
-            "seleniumProtocol": "WebDriver", 
-            "browserName": "chrome", 
-            "resolution": "1280x720", 
-            "maxInstances": 5
-        }
-    ], 
-    "custom": {}, 
-    "unregisterIfStillDownAfter": 60000, 
-    "host": "41.228.252.252", 
-    "role": "node", 
-    "proxy": "org.openqa.asayer.AsayerWithVideo", 
-    "timeout": 180, 
-    "debug": false, 
-    "downPollingLimit": 2, 
-    "maxSession": 1, 
-    "port": 5556, 
-    "nodePolling": 20000
+  "nodeStatusCheckTimeout": 10000,
+  "withoutServlets": [],
+  "registerCycle": 5000,
+  "hub": "http://35.195.155.40:4444",
+  "browserTimeout": 90,
+  "servlets": [
+    "com.aimmac23.node.servlet.VideoRecordingControlServlet",
+    "org.openqa.asayer.GetLooseServlet"
+  ],
+  "register": true,
+  "capabilities": [
+    {
+      "seleniumProtocol": "WebDriver",
+      "browserName": "chrome",
+      "resolution": "1280x720",
+      "maxInstances": 5,
+      "debug": true,
+      "debug.video": true
+    }
+  ],
+  "custom": {},
+  "unregisterIfStillDownAfter": 60000,
+  "host": "41.228.252.252",
+  "role": "node",
+  "proxy": "org.openqa.asayer.AsayerWithVideo",
+  "timeout": 180,
+  "debug": false,
+  "downPollingLimit": 2,
+  "maxSession": 1,
+  "port": 5556,
+  "nodePolling": 20000
 }

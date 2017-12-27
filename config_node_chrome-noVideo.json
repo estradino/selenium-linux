@@ -3,7 +3,6 @@
   "registerCycle": 5000,
   "hub": "http://localhost:4444",
   "servlets": [
-    "com.aimmac23.node.servlet.VideoRecordingControlServlet",
     "org.openqa.asayer.GetLooseServlet"
   ],
   "register": false,
@@ -14,15 +13,15 @@
       "resolution": "1280x720",
       "version": "62",
       "maxInstances": 5,
-      "debug": true,
-      "debug.video": true
+      "debug": false,
+      "debug.video": false
     }
   ],
   "custom": {},
   "port": "5555",
   "unregisterIfStillDownAfter": 60000,
   "role": "node",
-  "proxy": "org.openqa.asayer.AsayerWithVideo",
+  "proxy": "org.openqa.asayer.AsayerProxy",
   "debug": false,
   "downPollingLimit": 2,
   "maxSession": 1,

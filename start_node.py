@@ -7,6 +7,33 @@ import requests
 import sched
 import time
 import sys
+import argparse
+
+parser = argparse.ArgumentParser(
+    description="the node side script to run selenium-node & heartbeat & subscribe to hub & check hub",
+    epilog="created by the Asayer team")
+parser.add_argument("-s", "--seleniumVersion", help="the selenium version of the hub (default 3.6.0)", default="3.6.0")
+parser.add_argument("-c", "--config", help="the node json config file", default="configNode.json")
+parser.add_argument("-p", "--proxyVersion", help="the proxy version to use (default 3.6)", default="3.6")
+parser.add_argument("--Xmx", help="the Xmx size in Mb (default 512)", default="512")
+parser.add_argument("--noVideoJar", help="don't import selenium-node-video.jar (default false)",
+                    action='store_true')
+
+args = parser.parse_args()
+
+# monkey-patch for the print() function
+old_f = sys.stdout
+
+
+class F:
+    def write(self, x):
+        old_f.write(x.replace("\n", " [at %s]\n" % str(time.strftime("%c"))))
+
+    def flush(self):
+        pass
+
+
+sys.stdout = F()
 
 s = sched.scheduler(time.time, time.sleep)
 authorization_token = '301f2b9da3e976f40c1bafe68ca0c703cc58221c7098da654099a40a9885dfcb'
@@ -16,17 +43,25 @@ node_heartbeat_url = "https://api.asayer.io/dev/selenium/node/linux/heartbeat"
 
 id_env_var_name = "ID"
 
-node_config_file_name = "configNode.json" if len(sys.argv) < 2 else sys.argv[1]
-
+node_config_file_name = args.config
+hub_version_3 = int(args.seleniumVersion.partition(".")[0]) > 2
 separator = ";" if platform.system().lower() == "windows" else ":"
 script_directory = os.getcwd()
 
+proxy = "proxy" + args.proxyVersion + ".jar"
+classpath = [
+    '%s/%s' % (script_directory, proxy),
+    '%s/selenium-server-standalone-%s.jar' % (script_directory, args.seleniumVersion)
+]
+
+if args.noVideoJar is False:
+    classpath.append('%s/selenium-video-node-2.5.jar' % script_directory)
+
 execute_jar_args = ['java',
-                    '-Xmx512M',
+                    '-Xmx' + args.Xmx + 'M',
                     '-cp',
-                    '%s/selenium-video-node-2.5.jar%s%s/proxy.jar%s%s/selenium-server-standalone-3.4.0.jar' % (
-                        script_directory, separator, script_directory, separator, script_directory),
-                    'org.openqa.grid.selenium.GridLauncherV3',
+                    separator.join(classpath),
+                    'org.openqa.grid.selenium.GridLauncherV3' if hub_version_3 else 'org.openqa.grid.selenium.GridLauncher',
                     '-role',
                     'node',
                     '-nodeConfig',

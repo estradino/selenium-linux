@@ -1,33 +1,32 @@
 {
+  "nodeStatusCheckTimeout": 10000,
   "withoutServlets": [],
   "registerCycle": 5000,
-  "hub": "http://localhost:4444",
+  "hub": "http://35.195.155.40:4444",
+  "browserTimeout": 90,
   "servlets": [
-    "com.aimmac23.node.servlet.VideoRecordingControlServlet",
     "org.openqa.asayer.GetLooseServlet"
   ],
-  "register": false,
+  "register": true,
   "capabilities": [
     {
       "seleniumProtocol": "WebDriver",
       "browserName": "chrome",
       "resolution": "1280x720",
-      "version": "62",
       "maxInstances": 5,
-      "debug": true,
-      "debug.video": true
+      "debug": false,
+      "debug.video": false
     }
   ],
   "custom": {},
-  "port": "5555",
   "unregisterIfStillDownAfter": 60000,
+  "host": "41.228.252.252",
   "role": "node",
-  "proxy": "org.openqa.asayer.AsayerWithVideo",
+  "proxy": "org.openqa.asayer.AsayerProxy",
+  "timeout": 180,
   "debug": false,
   "downPollingLimit": 2,
   "maxSession": 1,
-  "browserTimeout": 90,
-  "timeout": 180,
-  "nodeStatusCheckTimeout": 10000,
+  "port": 5556,
   "nodePolling": 20000
 }
