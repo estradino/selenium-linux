@@ -14,6 +14,7 @@
       "seleniumProtocol": "WebDriver",
       "browserName": "chrome",
       "resolution": "1280x720",
+	  "version": "latest",
       "maxInstances": 5,
       "debug": true,
       "debug.video": true

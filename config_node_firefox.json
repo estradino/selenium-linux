@@ -12,7 +12,7 @@
       "seleniumProtocol": "WebDriver",
       "browserName": "firefox",
       "resolution": "1280x720",
-      "version": "56.0.1",
+      "version": "latest",
       "maxInstances": 5,
       "debug": true,
       "debug.video": true
