@@ -3,7 +3,6 @@
   "registerCycle": 5000,
   "hub": "http://localhost:4444",
   "servlets": [
-    "com.aimmac23.node.servlet.VideoRecordingControlServlet",
     "org.openqa.asayer.GetLooseServlet"
   ],
   "register": false,
@@ -14,8 +13,8 @@
       "resolution": "1280x720",
       "version": "latest",
       "maxInstances": 5,
-      "debug": true,
-      "debug.video": true
+      "debug": false,
+      "debug.video": false
     }
   ],
   "custom": {},
